@@ -47,13 +47,6 @@ Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show')
 // operations on database : ( insert record - delete - update )
 
 
+Auth::routes();
 
-
-
-
-
-
-
-
-
-
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

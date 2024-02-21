@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
-@section('title') index @endsection
+@section('title')
+    index
+@endsection
 
 @section('content')
 
@@ -32,25 +34,27 @@
                         <form style="display: inline" action="{{ route('posts.destroy', $post->id) }}" method="post">
                             @csrf
                             @method('delete')
-                            <button type="button" class="btn btn-danger px-2" onclick="confirmDelete(this.form)">Delete</button>
+                            <button type="button" class="btn btn-danger px-2" onclick="confirmDelete(this.form)">
+                                Delete
+                            </button>
                         </form>
                     </div>
                 </td>
             </tr>
         @endforeach
         </tbody>
- </table>
+    </table>
 
-<script>
-    function confirmDelete(form) {
-        if (confirm("Are you sure you want to delete?")) {
-            // User clicked OK, proceed with delete action
-            form.submit();
-        } else {
-            // User clicked Cancel, do nothing
-            return false;
+    <script>
+        function confirmDelete(form) {
+            if (confirm("Are you sure you want to delete?")) {
+                // User clicked OK, proceed with delete action
+                form.submit();
+            } else {
+                // User clicked Cancel, do nothing
+                return false;
+            }
         }
-    }
-</script>
+    </script>
 
 @endsection

@@ -1,5 +1,7 @@
 @extends('layouts.app')
-@section('title') Update @endsection
+@section('title')
+    Update
+@endsection
 @section('content')
 
     @if ($errors->any())
@@ -17,11 +19,13 @@
         @method('PUT')
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Title</label>
-            <input value="{{$post->title}}" required type="text" class="form-control" name="title" id="exampleFormControlInput1" placeholder="name@example.com">
+            <input value="{{$post->title}}" required type="text" class="form-control" name="title"
+                   id="exampleFormControlInput1" placeholder="name@example.com">
         </div>
         <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-            <textarea  required class="form-control" id="exampleFormControlTextarea1" name="description" rows="3">{{$post->description}}</textarea>
+            <textarea required class="form-control" id="exampleFormControlTextarea1" name="description"
+                      rows="3">{{$post->description}}</textarea>
         </div>
         <div class="mb-3">
             <select required class="form-select" aria-label="Creator" name="posted_by">
