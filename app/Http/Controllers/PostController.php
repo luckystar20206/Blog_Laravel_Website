@@ -16,7 +16,6 @@ class PostController extends Controller // StudlyCase
 //        $LocalBooks = ['HTML' , 'CSS' , 'JS']; // the same here also!
 //        return view('test' , ['name' => $localName , 'books' => $LocalBooks]); // view -> is a global helper method
 //    }
-
     public function index()
     {
         // static data:
